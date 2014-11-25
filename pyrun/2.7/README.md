@@ -9,7 +9,7 @@ The total image size is **18.44 MB**. This is achieved by using the great [progr
 ### Usage:
 
 ```bash
-$ docker run -t -i --rm elyase/pyrun python
+$ docker run -t -i --rm elyase/pyrun:2.7 python
 eGenix PyRun 2.7.8 (release 2.0.1, default, Aug 26 2014, 11:43:05)
 [GCC 4.6.4]
 Thank you for using eGenix PyRun. Type "help" or "license" for details.
@@ -37,7 +37,11 @@ You have a small pure python script that you want to test/run in an isolated doc
 
 **Which python version is installed in the container?:**
 
-There are two image tags, one for python 2.7 and one for python 3.4.
+There are two image tags, one for python 2.7 and one for python 3.4. Ex:
+
+```bash
+$ docker pull elyase/pyrun:3.4
+```
 
 **What are the drawbacks?:**
 
