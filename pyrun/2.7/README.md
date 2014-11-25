@@ -41,10 +41,12 @@ There are two image tags, one for python 2.7 and one for python 3.4.
 
 **What are the drawbacks?:**
 
-Please refer to [PyRun's](https://www.egenix.com/products/python/PyRun/) page. Esentially it is somewhat difficult to install
-dependencies and some less used modules are missing like `readline`, `tkinter`, `multiprocessing`, etc. In
-general everything should run like in a standard python distribution.
+Please refer to [PyRun's](https://www.egenix.com/products/python/PyRun/) page. Esentially: it is somewhat difficult to install dependencies and some less used modules are missing like `readline`, `tkinter`, `multiprocessing`, etc. In general everything should run like in a standard python distribution.
 
 **Can I install packages?**
 
 No, but I am planning on also making a pip compatible image.
+
+### Credits
+
+[@elyase](http://yasermartinez.com/blog/)

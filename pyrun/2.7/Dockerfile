@@ -1,5 +1,5 @@
 FROM progrium/busybox
-MAINTAINER Yaser Martinez Palenzuela
+MAINTAINER Yaser Martinez Palenzuela <@elyase>
 RUN opkg-install bzip2 libsqlite3 libpthread zlib libopenssl
 ADD pyrun2.7 /bin/python
 RUN ln -s /usr/lib/libbz2.so.1.0 /usr/lib/libbz2.so.1
