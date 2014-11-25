@@ -1,7 +1,7 @@
 docker-pyrun
 ============
 
-A small(the smallest?) docker container for python.
+A small (the smallest?) docker container for python.
 
 The total image size is **18.44 MB**. This is achieved by using the great [progrium/busybox](https://github.com/progrium/busybox)
  as base image and the super small [Egenix PyRun](https://www.egenix.com/products/python/PyRun/).
@@ -20,7 +20,7 @@ Thank you for using eGenix PyRun. Type "help" or "license" for details.
 For a new image create a `Dockerfile` in your Python app project:
 
 ```
-FROM elyase/mini-python:2.7
+FROM elyase/pyrun:2.7
 CMD [ "python", "./your-daemon-or-script.py" ]
 ```
 
@@ -28,8 +28,7 @@ CMD [ "python", "./your-daemon-or-script.py" ]
 
 **Why?:**
 
-The official docker python image is too big, the smallest python docker image runs at several hundred MBs. The reason
-for that is that a typical Ubuntu base image is more than 200MB in size plus ~100Mb for a basic python installation.
+The official docker python image is too big (**900 MB**), the smallest python docker image runs at several hundred MBs. The reason for that is that a typical Ubuntu base image is more than 200MB in size plus ~100Mb for a basic python installation.
 
 **When is this useful?:**
 
