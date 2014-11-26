@@ -1,7 +1,7 @@
 docker-pyrun
 ============
 
-A small (the smallest?) docker container for python.
+A small (the smallest?) docker image for python.
 
 The total image size is **18.44 MB**. This is achieved by using the great [progrium/busybox](https://github.com/progrium/busybox)
  as base image and the super small [Egenix PyRun](https://www.egenix.com/products/python/PyRun/).
