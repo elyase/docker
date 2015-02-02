@@ -3,7 +3,7 @@
 
 FROM progrium/busybox
 MAINTAINER Yaser Martinez Palenzuela
-RUN opkg-install bash bzip2
+RUN opkg-install bash bzip2 zlib
 ADD conda_install.sh /root/conda_install.sh
 RUN ["bash", "/root/conda_install.sh"]
-ENV PATH /root/miniconda3/bin:$PATH
+ENV PATH /root/miniconda/bin:$PATH

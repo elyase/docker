@@ -1,7 +1,7 @@
-URL=http://repo.continuum.io/miniconda/Miniconda3-3.8.3-Linux-x86_64.sh
+URL=http://repo.continuum.io/miniconda/Miniconda-3.8.3-Linux-x86_64.sh
 
 # Install dir
-PREFIX=$HOME/miniconda3
+PREFIX=$HOME/miniconda
 mkdir -p $PREFIX
 
 # Download Miniconda
