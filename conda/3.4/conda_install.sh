@@ -17,7 +17,7 @@ extract_dist()
     echo "installing: $1 ..."
     DIST=pkgs/$(basename $1 .tar.bz2)
     mkdir -p $DIST
-    bunzip2 -c ${DIST}.tar.bz2 | tar xvf - -C $DIST
+    bunzip2 -c ${DIST}.tar.bz2 | tar xf - -C $DIST
     rm -f ${DIST}.tar.bz2
 }
 
