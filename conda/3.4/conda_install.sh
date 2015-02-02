@@ -23,7 +23,7 @@ extract_dist()
 
 for x in pkgs/*.tar.bz2; do extract_dist $x; done
 
-# Install minicoda
+# Install miniconda
 mkdir $PREFIX/envs
 mkdir $HOME/.continuum 2>/dev/null
 
