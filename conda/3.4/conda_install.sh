@@ -41,36 +41,14 @@ conda install -c https://conda.binstar.org/zhenxieit libstdcplus
 ## clean to reduce image size
 
 # delete tests
-find . -type d -name tests -delete
-find . -type d -name test -delete
+find . -type d -name tests -depth -exec rm -rf {} \;
+find . -type d -name test -depth -exec rm -rf {} \;
 
 # remove .pyc
-find . -name \__pycache__ -delete
+find . -name \__pycache__ -depth -exec rm -rf {} \;
 
 # remove pkgs cache
 rm -r pkgs/*
 
 #remove installer
 rm Miniconda*.sh
-
-# Experimental alternative cleaning by choosing .py or .pyc according to size
-# for x in `find . -name *.py`;
-# do
-# dir=$(dirname $x);
-# name=$(basename $x .py);
-# pyc=$dir/__pycache__/$name.cpython-34.pyc;
-# if [ -e $pyc ]; then
-# pycsize=$(wc -c < "$pyc");
-# pysize=$(wc -c < "$x");
-# if (( $pysize > $pycsize )); then
-# if [ -s $x ];then
-# rm $x
-# fi
-# else
-# if [ -s $pyc ];then
-# rm $pyc
-# fi
-# fi
-# fi
-# done
-
