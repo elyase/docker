@@ -5,12 +5,12 @@ PREFIX=$HOME/miniconda3
 mkdir -p $PREFIX
 
 # Download Miniconda
-wget $URL -P $PREFIX
+wget --no-verbose $URL -P $PREFIX
 
 # Extract packages
 cd $PREFIX
 LINES=$(cat Miniconda* | grep 'MD5=' | cut -d' ' -f3)
-tail -n $LINES Miniconda* | tar -xvf -
+tail -n $LINES Miniconda* | tar -xf -
 
 extract_dist()
 {
@@ -41,18 +41,17 @@ conda install -c https://conda.binstar.org/zhenxieit libstdcplus
 ## clean to reduce image size
 
 # delete tests
-find . -type d -name tests -exec rm -rf {} \;
-find . -type d -name test -exec rm -rf {} \;
+find . -type d -name tests -delete
+find . -type d -name test -delete
 
 # remove .pyc
-find . -name \__pycache__ -exec rm -rf {} \;
+find . -name \__pycache__ -delete
 
 # remove pkgs cache
 rm -r pkgs/*
 
 #remove installer
 rm Miniconda*.sh
-
 
 # Experimental alternative cleaning by choosing .py or .pyc according to size
 # for x in `find . -name *.py`;
