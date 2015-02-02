@@ -5,7 +5,7 @@ PREFIX=$HOME/miniconda3
 mkdir -p $PREFIX
 
 # Download Miniconda
-wget --no-verbose $URL -P $PREFIX
+wget -q $URL -P $PREFIX
 
 # Extract packages
 cd $PREFIX
